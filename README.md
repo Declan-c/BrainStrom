@@ -1,2 +1,2 @@
 # QtOnlineBrain
-Qt_online_answer_question
+基于QT的答题系统
