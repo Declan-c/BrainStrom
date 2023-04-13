@@ -1,0 +1,10 @@
+debug/main.o
+debug/register.o
+debug/communicate.o
+debug/login.o
+debug/training.o
+debug/qrc_res.o
+debug/moc_register.o
+debug/moc_communicate.o
+debug/moc_login.o
+debug/moc_training.o

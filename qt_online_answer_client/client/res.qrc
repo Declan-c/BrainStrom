@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/logo.jpg</file>
+        <file>pic/show.png</file>
+        <file>pic/Chinese.png</file>
+        <file>pic/English.png</file>
+        <file>pic/Eng1.png</file>
+        <file>pic/math1.png</file>
+        <file>pic/back.png</file>
+        <file>pic/loading.gif</file>
+        <file>pic/win.wav</file>
+        <file>pic/lose.wav</file>
+    </qresource>
+</RCC>
