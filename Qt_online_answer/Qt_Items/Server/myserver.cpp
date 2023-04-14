@@ -245,12 +245,12 @@ void Myserver::GetQuestion(TcpSocket *s, int flag)
         if (!ret)
         {
             result = ERROR;
-            spdlog::get("Math")->error("select question error");
+            spdlog::get("log")->error("select question error");
         }
         json["cmd"] = GETMATHQUESTION;
         json["result"] = result;
         json["question"] = outJson;
-        spdlog::get("Math")->info("用户{} [{}:{}] 获取题目：{}\n", s->getUserName(), s->getIp(), s->getPort(), json.toStyledString());
+        spdlog::get("log")->info("用户{} [{}:{}] 获取题目：{}\n", s->getUserName(), s->getIp(), s->getPort(), json.toStyledString());
     }
     else if(GETCHIQUESTION == flag)
     {
@@ -262,12 +262,12 @@ void Myserver::GetQuestion(TcpSocket *s, int flag)
         if (!ret)
         {
             result = ERROR;
-            spdlog::get("Chinese")->error("select question error");
+            spdlog::get("log")->error("select question error");
         }
         json["cmd"] = GETCHIQUESTION;
         json["result"] = result;
         json["question"] = outJson;
-        spdlog::get("Chinese")->info("用户{} [{}:{}] 获取题目：{}\n", s->getUserName(), s->getIp(), s->getPort(), json.toStyledString());
+        spdlog::get("log")->info("用户{} [{}:{}] 获取题目：{}\n", s->getUserName(), s->getIp(), s->getPort(), json.toStyledString());
     }
     else if(GETENGQUESTION == flag)
     {
@@ -279,18 +279,18 @@ void Myserver::GetQuestion(TcpSocket *s, int flag)
         if (!ret)
         {
             result = ERROR;
-            spdlog::get("English")->error("select question error");
+            spdlog::get("log")->error("select question error");
         }
         json["cmd"] = GETENGQUESTION;
         json["result"] = result;
         json["question"] = outJson;
-        spdlog::get("English")->info("用户{} [{}:{}] 获取题目：{}\n", s->getUserName(), s->getIp(), s->getPort(), json.toStyledString());
+        spdlog::get("log")->info("用户{} [{}:{}] 获取题目：{}\n", s->getUserName(), s->getIp(), s->getPort(), json.toStyledString());
     }
 
     writeData(s, json);
 }
 
-/*-----------------rank-------------------*/
+/*-----------------排位rank-------------------*/
 
 // 初始化段位列表
 void Myserver::initRankMap()
@@ -411,7 +411,7 @@ void Myserver::startRank(TcpSocket *first, TcpSocket *second)
 {
     char sql[1024] = {0};
     memset(sql, 0, sizeof(sql));
-    sprintf(sql, "select * from question order by rand() limit %d", QUESTION_NUM);
+    sprintf(sql, "select * from math_question1 order by rand() limit %d", QUESTION_NUM);
 
     int result = OK;
     Json::Value outJson;
