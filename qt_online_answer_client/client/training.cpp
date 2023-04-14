@@ -76,7 +76,7 @@ void training::singleAnswerQuestion(int select)
         ui->lcdNumber->display(_singleSec);
         _singleTimer.start(1000);
     }
-else
+    else
     {
         loseSound->play();
         ui->single_Result->setText("很遗憾，回答错误");
@@ -185,7 +185,7 @@ void training::on_singnal_score_backButton_clicked()
     ui->stackedWidget->setCurrentWidget(ui->mainMenu);
 }
 
-/*--------------------rank-------------------*/
+/*--------------------排位赛rank-------------------*/
 void training::RankTimerOut()
 {
     --RankSec;
@@ -202,19 +202,21 @@ void training::RankTimerOut()
     ui->lcdNumber_2->display(RankSec);
 }
 
-
+// 自己的对战信息
 void training::SetSelfLineInfo()
 {
     QString str = QString("%1(%2) %3").arg(SelfName,-5).arg(SelfRank).arg(SelfScore);
     ui->selfScore->setText(str);
 }
 
+// 对手的对战信息
 void training::SetEnemyLineInfo()
 {
     QString str = QString("%1(%2) %3").arg(EnemyName,-5).arg(EnemyRank).arg(EnemyScore);
     ui->enemyScore->setText(str);
 }
 
+// 排位设置问题
 void training::RankSetQuestion()
 {
     ui->rankQuestion->setText(RankQuestion["question"].toArray().at(CurrentRankQuestion).toString());
@@ -246,7 +248,7 @@ void training::RankSetQuestion()
     }
 }
 
-//点击进入排位赛
+// 点击进入排位赛
 void training::on_rankButton_clicked()
 {
     QJsonObject json;
@@ -262,7 +264,7 @@ void training::on_rankButton_clicked()
 
 }
 
-//开始排位
+// 开始排位
 void training::Rank(QJsonObject json)
 {
     int result_rank = json["cmd"].toInt();
@@ -307,7 +309,7 @@ void training::Rank(QJsonObject json)
     }
 }
 
-//处理排位结果
+// 处理排位结果
 void training::RankSetResult(QJsonObject json)
 {
     QString newRank = json["newRank"].toString();
@@ -330,7 +332,7 @@ void training::RankSetResult(QJsonObject json)
     ui->stackedWidget->setCurrentWidget(ui->rank_Result);
 }
 
-//排位答题
+// 排位答题
 void training::RankAnswerQuestion(int select)
 {
     //计算得分
@@ -343,7 +345,6 @@ void training::RankAnswerQuestion(int select)
     //判断是否进入下一题
     if(EnemyRankQueston == CurrentRankQuestion)
     {
-        //std::cout<<"EnemyRankQueston = "<<EnemyRankQueston<<" CurrentRankQuestion = "<<CurrentRankQuestion<<std::endl;
         RankSec = QUESTIONTIME;
         RankTimer.stop();
         ui->lcdNumber_2->display(RankSec);
@@ -400,7 +401,6 @@ void training::on_rankSelectButton4_clicked()
 }
 
 
-
 void training::on_pushButton_clicked()
 {
     ui->rank_Result->close();
@@ -412,6 +412,6 @@ void training::on_cancel_clicked()
 {
     QJsonObject json;
     json["cmd"] = CANCEL;
-    _com->writeData(json); //发送取消排位请求
+    _com->writeData(json); // 发送取消排位请求
     ui->stackedWidget->setCurrentWidget(ui->mainMenu);
 }
