@@ -349,7 +349,7 @@ void training::RankSetResult(QJsonObject json)
     {
 //        ui->RankResult->setText("失败");
         QPixmap pic(":/pic/Lose.png");
-        QSize size2(180,180);
+        QSize size2(180,200);
         pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
         ui->RankResult->setPixmap(pic);
     }
@@ -357,7 +357,7 @@ void training::RankSetResult(QJsonObject json)
     {
 //        ui->RankResult->setText("成功");
         QPixmap pic(":/pic/Win.png");
-        QSize size2(180,180);
+        QSize size2(180,200);
         pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
         ui->RankResult->setPixmap(pic);
     }

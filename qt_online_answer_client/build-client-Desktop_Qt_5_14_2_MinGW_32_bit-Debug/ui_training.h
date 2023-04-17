@@ -737,6 +737,7 @@ public:
         verticalLayout_16->setObjectName(QString::fromUtf8("verticalLayout_16"));
         NewRank = new QLabel(widget_13);
         NewRank->setObjectName(QString::fromUtf8("NewRank"));
+        NewRank->setFont(font);
 
         verticalLayout_16->addWidget(NewRank);
 
@@ -774,7 +775,7 @@ public:
 
         retranslateUi(training);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(7);
         back_to_main->setDefault(false);
 
 
@@ -823,7 +824,7 @@ public:
         rankSelectButton3->setText(QCoreApplication::translate("training", "C", nullptr));
         rankSelectButton4->setText(QCoreApplication::translate("training", "D", nullptr));
         RankResult->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\">win/lose</p><p align=\"center\"><br/></p></body></html>", nullptr));
-        NewRank->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">\351\273\204\351\207\2211 2\351\242\227\346\230\237 --&gt; \351\273\204\351\207\2211 3\351\242\227\346\230\237</span></p></body></html>", nullptr));
+        NewRank->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">\351\273\204\351\207\2211 2\351\242\227\346\230\237 --&gt; \351\273\204\351\207\2211 3\351\242\227\346\230\237</span></p></body></html>", nullptr));
         pushButton->setText(QCoreApplication::translate("training", "\350\277\224 \345\233\236 \344\270\273 \351\241\265", nullptr));
     } // retranslateUi
 
