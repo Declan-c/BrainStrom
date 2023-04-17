@@ -17,6 +17,7 @@ training::training(Communicate *com,QJsonObject JSON,QWidget *parent) :
     winSound = new QSound(":/pic/win.wav", this);
     loseSound = new QSound(":/pic/lose.wav", this);
 
+    ui->stackedWidget->setCurrentIndex(0);
     // 排位定时器
     connect(&RankTimer,SIGNAL(timeout()),this,SLOT(RankTimerOut()));
     // 个人训练定时器
@@ -46,7 +47,14 @@ void training::singleSetQuestion()
     {
         _singleTimer.stop();  // 关闭计时器
         // 显示成绩
-        ui->single_Result->setText("恭喜你，全部回答正确");
+//        ui->single_Result->setText("恭喜你，全部回答正确");
+        QPixmap pic1(":/pic/cw1.png");
+        QPixmap pic2(":/pic/cw2.png");
+        pic1 = pic1.scaled(ui->single_Result->size(),Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
+        pic2 = pic2.scaled(ui->single_Result2->size(),Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
+        ui->single_Result->setPixmap(pic1);
+        ui->single_Result2->setPixmap(pic2);
+
         QString str = QString("本次得分：%1").arg(_singleScore);
         ui->single_Result_Score->setText(str);
         ui->stackedWidget->setCurrentWidget(ui->single_score);
@@ -79,7 +87,15 @@ void training::singleAnswerQuestion(int select)
     else
     {
         loseSound->play();
-        ui->single_Result->setText("很遗憾，回答错误");
+        ui->single_Result2->setText("很遗憾，回答错误！");
+//        QPixmap pic1(":/pic/cl1.png");
+        QPixmap pic2(":/pic/cl.png");
+//        QSize size1(100,100);
+        QSize size2(180,190);
+//        pic1 = pic1.scaled(size1);
+        pic2 = pic2.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
+//        ui->single_Result->setPixmap(pic1);
+        ui->single_Result->setPixmap(pic2);
         QString str = QString("本次得分：%1").arg(_singleScore);
         ui->single_Result_Score->setText(str);
         _singleTimer.stop();
@@ -111,7 +127,15 @@ void training::singleTimerOut()
         {
             _singleTimer.stop();
             ui->stackedWidget->setCurrentWidget(ui->single_score);
-            ui->single_Result->setText("很遗憾，回答错误");
+//            ui->single_Result->setText("很遗憾，回答错误");
+            QPixmap pic1(":/pic/cl1.png");
+            QPixmap pic2(":/pic/cl.png");
+            QSize size1(100,100);
+            QSize size2(160,170);
+            pic1 = pic1.scaled(size1);
+            pic2 = pic2.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
+            ui->single_Result->setPixmap(pic1);
+            ui->single_Result2->setPixmap(pic2);
             QString str = QString("本次得分：%1").arg(_singleScore);
             ui->single_Result_Score->setText(str);
         }
@@ -182,7 +206,7 @@ void training::on_single_SelectButton_four_clicked()
 void training::on_singnal_score_backButton_clicked()
 {
     ui->single_score->close();
-    ui->stackedWidget->setCurrentWidget(ui->mainMenu);
+    ui->stackedWidget->setCurrentWidget(ui->select_menu);
 }
 
 /*--------------------排位赛rank-------------------*/
@@ -315,15 +339,27 @@ void training::RankSetResult(QJsonObject json)
     QString newRank = json["newRank"].toString();
     if(SelfScore == EnemyScore)
     {
-        ui->RankResult->setText("平局");
+//        ui->RankResult->setText("平局");
+        QPixmap pic(":/pic/equal.png");
+        QSize size2(180,180);
+        pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
+        ui->single_Result->setPixmap(pic);
     }
     else if(SelfScore < EnemyScore)
     {
-        ui->RankResult->setText("失败");
+//        ui->RankResult->setText("失败");
+        QPixmap pic(":/pic/Lose.png");
+        QSize size2(180,180);
+        pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
+        ui->single_Result->setPixmap(pic);
     }
     else if(SelfScore > EnemyScore)
     {
-        ui->RankResult->setText("成功");
+//        ui->RankResult->setText("成功");
+        QPixmap pic(":/pic/Win.png");
+        QSize size2(180,180);
+        pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
+        ui->single_Result->setPixmap(pic);
     }
     QString str = QString("%1 --> %2").arg(SelfRank).arg(newRank);
     ui->NewRank->setText(str);

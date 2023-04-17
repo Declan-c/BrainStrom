@@ -20,6 +20,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,7 +29,7 @@ QT_BEGIN_NAMESPACE
 class Ui_training
 {
 public:
-    QGridLayout *gridLayout_2;
+    QVBoxLayout *verticalLayout_18;
     QStackedWidget *stackedWidget;
     QWidget *mainMenu;
     QVBoxLayout *verticalLayout_19;
@@ -72,27 +73,35 @@ public:
     QPushButton *single_back;
     QWidget *single_running;
     QVBoxLayout *verticalLayout_13;
+    QSpacerItem *verticalSpacer_11;
     QWidget *widget_7;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_4;
     QLCDNumber *lcdNumber;
+    QSpacerItem *verticalSpacer_12;
     QWidget *widget_9;
     QVBoxLayout *verticalLayout_11;
-    QLabel *single_question;
+    QTextBrowser *single_question;
+    QSpacerItem *verticalSpacer_13;
     QWidget *widget_8;
     QVBoxLayout *verticalLayout;
     QPushButton *single_SelectButton_one;
     QPushButton *single_SelectButton_two;
     QPushButton *single_SelectButton_three;
     QPushButton *single_SelectButton_four;
+    QSpacerItem *verticalSpacer_10;
     QWidget *single_score;
     QVBoxLayout *verticalLayout_2;
-    QSpacerItem *verticalSpacer;
-    QLabel *single_Result;
+    QWidget *widget_19;
+    QGridLayout *gridLayout_2;
     QLabel *single_Result_Score;
-    QSpacerItem *verticalSpacer_4;
-    QPushButton *singnal_score_backButton;
+    QSpacerItem *verticalSpacer;
     QSpacerItem *verticalSpacer_2;
+    QWidget *widget_20;
+    QGridLayout *gridLayout_3;
+    QPushButton *singnal_score_backButton;
+    QLabel *single_Result;
+    QLabel *single_Result2;
     QWidget *rank_wait;
     QVBoxLayout *verticalLayout_12;
     QSpacerItem *verticalSpacer_7;
@@ -118,18 +127,21 @@ public:
     QLabel *enemyScore;
     QLabel *selfScore;
     QLCDNumber *lcdNumber_2;
-    QLabel *rankQuestion;
+    QSpacerItem *verticalSpacer_16;
+    QTextBrowser *rankQuestion;
+    QSpacerItem *verticalSpacer_15;
     QWidget *widget_2;
     QVBoxLayout *verticalLayout_3;
     QPushButton *rankSelectButton1;
     QPushButton *rankSelectButton2;
     QPushButton *rankSelectButton3;
     QPushButton *rankSelectButton4;
+    QSpacerItem *verticalSpacer_14;
     QWidget *rank_Result;
     QVBoxLayout *verticalLayout_17;
+    QSpacerItem *verticalSpacer_4;
     QWidget *widget_12;
     QVBoxLayout *verticalLayout_4;
-    QSpacerItem *verticalSpacer_6;
     QLabel *RankResult;
     QWidget *widget_13;
     QVBoxLayout *verticalLayout_16;
@@ -152,8 +164,8 @@ public:
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/pic/logo.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         training->setWindowIcon(icon);
-        gridLayout_2 = new QGridLayout(training);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        verticalLayout_18 = new QVBoxLayout(training);
+        verticalLayout_18->setObjectName(QString::fromUtf8("verticalLayout_18"));
         stackedWidget = new QStackedWidget(training);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
         stackedWidget->setEnabled(true);
@@ -377,6 +389,10 @@ public:
         single_running->setObjectName(QString::fromUtf8("single_running"));
         verticalLayout_13 = new QVBoxLayout(single_running);
         verticalLayout_13->setObjectName(QString::fromUtf8("verticalLayout_13"));
+        verticalSpacer_11 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_13->addItem(verticalSpacer_11);
+
         widget_7 = new QWidget(single_running);
         widget_7->setObjectName(QString::fromUtf8("widget_7"));
         QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
@@ -409,22 +425,26 @@ public:
 
         verticalLayout_13->addWidget(widget_7);
 
+        verticalSpacer_12 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_13->addItem(verticalSpacer_12);
+
         widget_9 = new QWidget(single_running);
         widget_9->setObjectName(QString::fromUtf8("widget_9"));
         verticalLayout_11 = new QVBoxLayout(widget_9);
         verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
-        single_question = new QLabel(widget_9);
+        single_question = new QTextBrowser(widget_9);
         single_question->setObjectName(QString::fromUtf8("single_question"));
-        single_question->setMinimumSize(QSize(0, 200));
-        single_question->setMaximumSize(QSize(500, 300));
-        single_question->setSizeIncrement(QSize(0, 0));
-        single_question->setBaseSize(QSize(0, 0));
-        single_question->setFont(font4);
+        single_question->setFont(font);
 
         verticalLayout_11->addWidget(single_question);
 
 
         verticalLayout_13->addWidget(widget_9);
+
+        verticalSpacer_13 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_13->addItem(verticalSpacer_13);
 
         widget_8 = new QWidget(single_running);
         widget_8->setObjectName(QString::fromUtf8("widget_8"));
@@ -457,43 +477,73 @@ public:
 
         verticalLayout_13->addWidget(widget_8);
 
+        verticalSpacer_10 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_13->addItem(verticalSpacer_10);
+
         stackedWidget->addWidget(single_running);
         single_score = new QWidget();
         single_score->setObjectName(QString::fromUtf8("single_score"));
         verticalLayout_2 = new QVBoxLayout(single_score);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_2->addItem(verticalSpacer);
-
-        single_Result = new QLabel(single_score);
-        single_Result->setObjectName(QString::fromUtf8("single_Result"));
-        single_Result->setMinimumSize(QSize(0, 150));
-        single_Result->setSizeIncrement(QSize(0, 150));
-        single_Result->setFont(font4);
-
-        verticalLayout_2->addWidget(single_Result);
-
-        single_Result_Score = new QLabel(single_score);
+        widget_19 = new QWidget(single_score);
+        widget_19->setObjectName(QString::fromUtf8("widget_19"));
+        gridLayout_2 = new QGridLayout(widget_19);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        single_Result_Score = new QLabel(widget_19);
         single_Result_Score->setObjectName(QString::fromUtf8("single_Result_Score"));
-        single_Result_Score->setMinimumSize(QSize(0, 100));
-        single_Result_Score->setFont(font4);
+        single_Result_Score->setFont(font1);
+        single_Result_Score->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_2->addWidget(single_Result_Score);
+        gridLayout_2->addWidget(single_Result_Score, 4, 0, 1, 1);
 
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
-        verticalLayout_2->addItem(verticalSpacer_4);
+        gridLayout_2->addItem(verticalSpacer, 6, 0, 1, 1);
 
-        singnal_score_backButton = new QPushButton(single_score);
+        verticalSpacer_2 = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        gridLayout_2->addItem(verticalSpacer_2, 0, 0, 1, 1);
+
+        widget_20 = new QWidget(widget_19);
+        widget_20->setObjectName(QString::fromUtf8("widget_20"));
+        gridLayout_3 = new QGridLayout(widget_20);
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        singnal_score_backButton = new QPushButton(widget_20);
         singnal_score_backButton->setObjectName(QString::fromUtf8("singnal_score_backButton"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(10);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(singnal_score_backButton->sizePolicy().hasHeightForWidth());
+        singnal_score_backButton->setSizePolicy(sizePolicy3);
         singnal_score_backButton->setFont(font1);
+        singnal_score_backButton->setLayoutDirection(Qt::LeftToRight);
+        singnal_score_backButton->setIcon(icon1);
+        singnal_score_backButton->setIconSize(QSize(33, 30));
 
-        verticalLayout_2->addWidget(singnal_score_backButton);
+        gridLayout_3->addWidget(singnal_score_backButton, 0, 0, 1, 1);
 
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_2->addItem(verticalSpacer_2);
+        gridLayout_2->addWidget(widget_20, 5, 0, 1, 1);
+
+        single_Result = new QLabel(widget_19);
+        single_Result->setObjectName(QString::fromUtf8("single_Result"));
+        single_Result->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(single_Result, 1, 0, 1, 1);
+
+        single_Result2 = new QLabel(widget_19);
+        single_Result2->setObjectName(QString::fromUtf8("single_Result2"));
+        QFont font6;
+        font6.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font6.setPointSize(18);
+        single_Result2->setFont(font6);
+        single_Result2->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(single_Result2, 3, 0, 1, 1);
+
+
+        verticalLayout_2->addWidget(widget_19);
 
         stackedWidget->addWidget(single_score);
         rank_wait = new QWidget();
@@ -549,10 +599,10 @@ public:
 
         cancel = new QPushButton(widget_17);
         cancel->setObjectName(QString::fromUtf8("cancel"));
-        QFont font6;
-        font6.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
-        font6.setPointSize(12);
-        cancel->setFont(font6);
+        QFont font7;
+        font7.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font7.setPointSize(12);
+        cancel->setFont(font7);
 
         horizontalLayout_7->addWidget(cancel);
 
@@ -580,11 +630,11 @@ public:
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         widget_11 = new QWidget(widget);
         widget_11->setObjectName(QString::fromUtf8("widget_11"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(20);
-        sizePolicy3.setHeightForWidth(widget_11->sizePolicy().hasHeightForWidth());
-        widget_11->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(20);
+        sizePolicy4.setHeightForWidth(widget_11->sizePolicy().hasHeightForWidth());
+        widget_11->setSizePolicy(sizePolicy4);
         verticalLayout_15 = new QVBoxLayout(widget_11);
         verticalLayout_15->setObjectName(QString::fromUtf8("verticalLayout_15"));
         enemyScore = new QLabel(widget_11);
@@ -610,11 +660,20 @@ public:
 
         verticalLayout_14->addWidget(widget);
 
-        rankQuestion = new QLabel(rank_running);
+        verticalSpacer_16 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_14->addItem(verticalSpacer_16);
+
+        rankQuestion = new QTextBrowser(rank_running);
         rankQuestion->setObjectName(QString::fromUtf8("rankQuestion"));
-        rankQuestion->setFont(font4);
+        rankQuestion->setFont(font);
+        rankQuestion->setTabStopWidth(80);
 
         verticalLayout_14->addWidget(rankQuestion);
+
+        verticalSpacer_15 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_14->addItem(verticalSpacer_15);
 
         widget_2 = new QWidget(rank_running);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
@@ -644,6 +703,10 @@ public:
 
         verticalLayout_3->addWidget(rankSelectButton4);
 
+        verticalSpacer_14 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_14);
+
 
         verticalLayout_14->addWidget(widget_2);
 
@@ -652,14 +715,14 @@ public:
         rank_Result->setObjectName(QString::fromUtf8("rank_Result"));
         verticalLayout_17 = new QVBoxLayout(rank_Result);
         verticalLayout_17->setObjectName(QString::fromUtf8("verticalLayout_17"));
+        verticalSpacer_4 = new QSpacerItem(20, 60, QSizePolicy::Minimum, QSizePolicy::Fixed);
+
+        verticalLayout_17->addItem(verticalSpacer_4);
+
         widget_12 = new QWidget(rank_Result);
         widget_12->setObjectName(QString::fromUtf8("widget_12"));
         verticalLayout_4 = new QVBoxLayout(widget_12);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        verticalLayout_4->addItem(verticalSpacer_6);
-
         RankResult = new QLabel(widget_12);
         RankResult->setObjectName(QString::fromUtf8("RankResult"));
 
@@ -686,14 +749,14 @@ public:
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         pushButton = new QPushButton(widget_14);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy5(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy5);
         pushButton->setFont(font1);
         pushButton->setIcon(icon1);
-        pushButton->setIconSize(QSize(25, 25));
+        pushButton->setIconSize(QSize(30, 30));
 
         horizontalLayout_5->addWidget(pushButton);
 
@@ -706,12 +769,12 @@ public:
 
         stackedWidget->addWidget(rank_Result);
 
-        gridLayout_2->addWidget(stackedWidget, 0, 0, 1, 1);
+        verticalLayout_18->addWidget(stackedWidget);
 
 
         retranslateUi(training);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(2);
         back_to_main->setDefault(false);
 
 
@@ -741,28 +804,27 @@ public:
         single_start->setText(QCoreApplication::translate("training", "\345\274\200\345\247\213\347\255\224\351\242\230", nullptr));
         single_back->setText(QCoreApplication::translate("training", "\350\277\224\345\233\236", nullptr));
         label_4->setText(QCoreApplication::translate("training", "\344\270\252\344\272\272\351\227\257\345\205\263", nullptr));
-        single_question->setText(QCoreApplication::translate("training", "question", nullptr));
         single_SelectButton_one->setText(QCoreApplication::translate("training", "A", nullptr));
         single_SelectButton_two->setText(QCoreApplication::translate("training", "B", nullptr));
         single_SelectButton_three->setText(QCoreApplication::translate("training", "C", nullptr));
         single_SelectButton_four->setText(QCoreApplication::translate("training", "D", nullptr));
-        single_Result->setText(QCoreApplication::translate("training", "\346\210\220\345\212\237\344\270\216\345\220\246", nullptr));
-        single_Result_Score->setText(QCoreApplication::translate("training", "\345\276\227\345\210\206", nullptr));
-        singnal_score_backButton->setText(QCoreApplication::translate("training", "\350\277\224\345\233\236", nullptr));
+        single_Result_Score->setText(QCoreApplication::translate("training", "\345\210\206\346\225\260", nullptr));
+        singnal_score_backButton->setText(QCoreApplication::translate("training", "\350\277\224 \345\233\236 \345\210\227 \350\241\250", nullptr));
+        single_Result->setText(QCoreApplication::translate("training", "\345\233\276\346\240\207", nullptr));
+        single_Result2->setText(QCoreApplication::translate("training", "\346\226\207\345\255\227", nullptr));
         user_rank->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
         label_3->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\"><span style=\" font-size:28pt; font-weight:600;\">\346\255\243\345\234\250\344\270\272\344\275\240\345\214\271\351\205\215\345\257\271\346\211\213...</span></p></body></html>", nullptr));
         loading->setText(QString());
         cancel->setText(QCoreApplication::translate("training", "\345\217\226\346\266\210\345\214\271\351\205\215", nullptr));
         enemyScore->setText(QCoreApplication::translate("training", "\347\216\213\345\255\220 \346\256\265\344\275\215\357\274\232\351\273\204\351\207\2211 1\351\242\227\346\230\237 160\345\210\206", nullptr));
         selfScore->setText(QCoreApplication::translate("training", "\347\201\260\344\272\214 \346\256\265\344\275\215\357\274\232\347\231\275\351\223\2662 2\351\242\227\346\230\237 100\345\210\206", nullptr));
-        rankQuestion->setText(QCoreApplication::translate("training", "<html><head/><body><p><span style=\" font-size:16pt;\">\351\242\230\347\233\256</span></p></body></html>", nullptr));
         rankSelectButton1->setText(QCoreApplication::translate("training", "A", nullptr));
         rankSelectButton2->setText(QCoreApplication::translate("training", "B", nullptr));
         rankSelectButton3->setText(QCoreApplication::translate("training", "C", nullptr));
         rankSelectButton4->setText(QCoreApplication::translate("training", "D", nullptr));
-        RankResult->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\"><span style=\" font-size:36pt;\">\345\244\261\350\264\245!</span></p></body></html>", nullptr));
+        RankResult->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\">win/lose</p><p align=\"center\"><br/></p></body></html>", nullptr));
         NewRank->setText(QCoreApplication::translate("training", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">\351\273\204\351\207\2211 2\351\242\227\346\230\237 --&gt; \351\273\204\351\207\2211 3\351\242\227\346\230\237</span></p></body></html>", nullptr));
-        pushButton->setText(QCoreApplication::translate("training", "\350\277\224\345\233\236\344\270\273\351\241\265", nullptr));
+        pushButton->setText(QCoreApplication::translate("training", "\350\277\224 \345\233\236 \344\270\273 \351\241\265", nullptr));
     } // retranslateUi
 
 };

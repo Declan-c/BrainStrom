@@ -124,13 +124,20 @@ release/qrc_res.cpp: ../client/res.qrc \
 		../../../../QT/5.14.2/mingw73_32/bin/rcc.exe \
 		../client/pic/show.png \
 		../client/pic/Chinese.png \
+		../client/pic/congratulation.mp3 \
+		../client/pic/Lose.png \
 		../client/pic/Eng1.png \
 		../client/pic/lose.wav \
+		../client/pic/cw2.png \
+		../client/pic/equal.png \
 		../client/pic/loading.gif \
+		../client/pic/cl.png \
 		../client/pic/English.png \
+		../client/pic/cw1.png \
 		../client/pic/win.wav \
 		../client/pic/back.png \
 		../client/pic/math1.png \
+		../client/pic/Win.png \
 		../client/pic/logo.jpg
 	E:\QT\5.14.2\mingw73_32\bin\rcc.exe -name res ..\client\res.qrc -o release\qrc_res.cpp
 
@@ -266,7 +273,7 @@ release/moc_register.cpp: ../client/register.h \
 		../../../../QT/5.14.2/mingw73_32/include/QtCore/qjsonarray.h \
 		release/moc_predefs.h \
 		../../../../QT/5.14.2/mingw73_32/bin/moc.exe
-	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/CppProject/QtOnlineBrain-main/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/CppProject/QtOnlineBrain-main/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\register.h -o release\moc_register.cpp
+	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/Cultural_Game/BrainStrom/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/Cultural_Game/BrainStrom/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\register.h -o release\moc_register.cpp
 
 release/moc_communicate.cpp: ../client/communicate.h \
 		../../../../QT/5.14.2/mingw73_32/include/QtCore/QObject \
@@ -349,7 +356,7 @@ release/moc_communicate.cpp: ../client/communicate.h \
 		../../../../QT/5.14.2/mingw73_32/include/QtCore/qjsonarray.h \
 		release/moc_predefs.h \
 		../../../../QT/5.14.2/mingw73_32/bin/moc.exe
-	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/CppProject/QtOnlineBrain-main/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/CppProject/QtOnlineBrain-main/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\communicate.h -o release\moc_communicate.cpp
+	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/Cultural_Game/BrainStrom/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/Cultural_Game/BrainStrom/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\communicate.h -o release\moc_communicate.cpp
 
 release/moc_login.cpp: ../client/login.h \
 		../../../../QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
@@ -473,7 +480,7 @@ release/moc_login.cpp: ../client/login.h \
 		../../../../QT/5.14.2/mingw73_32/include/QtCore/qjsonarray.h \
 		release/moc_predefs.h \
 		../../../../QT/5.14.2/mingw73_32/bin/moc.exe
-	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/CppProject/QtOnlineBrain-main/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/CppProject/QtOnlineBrain-main/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\login.h -o release\moc_login.cpp
+	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/Cultural_Game/BrainStrom/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/Cultural_Game/BrainStrom/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\login.h -o release\moc_login.cpp
 
 release/moc_training.cpp: ../client/training.h \
 		../../../../QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
@@ -605,7 +612,7 @@ release/moc_training.cpp: ../client/training.h \
 		../../../../QT/5.14.2/mingw73_32/include/QtMultimedia/qtmultimedia-config.h \
 		release/moc_predefs.h \
 		../../../../QT/5.14.2/mingw73_32/bin/moc.exe
-	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/CppProject/QtOnlineBrain-main/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/CppProject/QtOnlineBrain-main/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\training.h -o release\moc_training.cpp
+	E:\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include E:/Cultural_Game/BrainStrom/qt_online_answer_client/build-client-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IE:/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IE:/Cultural_Game/BrainStrom/qt_online_answer_client/client -IE:/QT/5.14.2/mingw73_32/include -IE:/QT/5.14.2/mingw73_32/include/QtMultimedia -IE:/QT/5.14.2/mingw73_32/include/QtWidgets -IE:/QT/5.14.2/mingw73_32/include/QtGui -IE:/QT/5.14.2/mingw73_32/include/QtANGLE -IE:/QT/5.14.2/mingw73_32/include/QtNetwork -IE:/QT/5.14.2/mingw73_32/include/QtCore -I. -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IE:/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IE:/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\client\training.h -o release\moc_training.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:

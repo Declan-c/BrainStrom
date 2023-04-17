@@ -1,0 +1,10 @@
+release/main.o
+release/register.o
+release/communicate.o
+release/login.o
+release/training.o
+release/qrc_res.o
+release/moc_register.o
+release/moc_communicate.o
+release/moc_login.o
+release/moc_training.o

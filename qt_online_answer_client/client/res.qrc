@@ -10,5 +10,12 @@
         <file>pic/loading.gif</file>
         <file>pic/win.wav</file>
         <file>pic/lose.wav</file>
+        <file>pic/cl.png</file>
+        <file>pic/congratulation.mp3</file>
+        <file>pic/cw1.png</file>
+        <file>pic/cw2.png</file>
+        <file>pic/Lose.png</file>
+        <file>pic/Win.png</file>
+        <file>pic/equal.png</file>
     </qresource>
 </RCC>
