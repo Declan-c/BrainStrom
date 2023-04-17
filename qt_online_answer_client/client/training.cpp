@@ -343,7 +343,7 @@ void training::RankSetResult(QJsonObject json)
         QPixmap pic(":/pic/equal.png");
         QSize size2(180,180);
         pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
-        ui->single_Result->setPixmap(pic);
+        ui->RankResult->setPixmap(pic);
     }
     else if(SelfScore < EnemyScore)
     {
@@ -351,7 +351,7 @@ void training::RankSetResult(QJsonObject json)
         QPixmap pic(":/pic/Lose.png");
         QSize size2(180,180);
         pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
-        ui->single_Result->setPixmap(pic);
+        ui->RankResult->setPixmap(pic);
     }
     else if(SelfScore > EnemyScore)
     {
@@ -359,7 +359,7 @@ void training::RankSetResult(QJsonObject json)
         QPixmap pic(":/pic/Win.png");
         QSize size2(180,180);
         pic = pic.scaled(size2,Qt::AspectRatioMode::KeepAspectRatio,Qt::SmoothTransformation);
-        ui->single_Result->setPixmap(pic);
+        ui->RankResult->setPixmap(pic);
     }
     QString str = QString("%1 --> %2").arg(SelfRank).arg(newRank);
     ui->NewRank->setText(str);
